@@ -18,18 +18,18 @@ input {
 }
 #list {
   padding: 0;
-  background: lightblue;
-  margin: 0 auto;
-  max-width: 300px;
+  background: #f7f7f7;
+  margin: 100px auto;
+  width: 360px;
 }
-.complete {
+.completed {
   text-decoration: line-through;
   color: gray;
 }
 
 i.fa-trash-alt {
   height: 15px;
-  display: none;
+  /* display: none; */
   background: red;
 }
 
