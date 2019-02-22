@@ -1,3 +1,7 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .complete {
   text-decoration: line-through;
   color: gray;
@@ -9,4 +13,8 @@ i.fa-trash-alt {
 
 div {
   padding: 30px;
+}
+
+div:nth-child(even) {
+  color: red;
 }

@@ -1,4 +1,4 @@
-$("div").on("click", function() {
+$("div.todo").on("click", function() {
   $(this).toggleClass("complete");
 });
 
@@ -10,14 +10,14 @@ $(".fa-trash-alt").click(function() {
     .remove();
 });
 
-$("div").on("mouseover", function() {
+$("div.todo").on("mouseover", function() {
   console.log("in");
   $(this)
     .children("i")
     .show("fast");
 });
 
-$("div").on("mouseout", function() {
+$("div.todo").on("mouseout", function() {
   console.log("out");
   $(this)
     .children("i")
@@ -33,22 +33,24 @@ $(".fa-plus").click(function() {
 $("input").keypress(function(e) {
   if (e.which == 13) {
     //create new item
-    $("body").append(
-      "<div><i class='fas fa-trash-alt'></i>" + e.target.value + "</div>"
+    $("div#list").append(
+      "<div class='todo'><i class='fas fa-trash-alt'></i>" +
+        e.target.value +
+        "</div>"
     );
-    $("div")
+    $("div.todo")
       .last()
       .on("click", function() {
         $(this).toggleClass("complete");
       });
-    $("div")
+    $("div.todo")
       .last()
       .on("mouseover", function() {
         $(this)
           .children()
           .show("fast");
       });
-    $("div")
+    $("div.todo")
       .last()
       .on("mouseout", function() {
         $(this)
@@ -63,5 +65,6 @@ $("input").keypress(function(e) {
           .parent()
           .remove();
       });
+    console.log($("input").value);
   }
 });
