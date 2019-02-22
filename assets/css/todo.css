@@ -21,6 +21,7 @@ h1 {
   font-size: 24px;
   font-weight: normal;
 }
+
 .fa-plus {
   float: right;
 }
@@ -48,6 +49,7 @@ input:focus {
   width: 360px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
 }
+
 .completed {
   text-decoration: line-through;
   color: gray;
@@ -56,21 +58,15 @@ input:focus {
 i.fa-trash-alt {
   display: inline-block;
   height: 40px;
-  width: 40px;
+  width: 0px;
   line-height: 40px;
   background: #e74c3c;
   margin-right: 20px;
   text-align: center;
-  /* justify-content: center; */
   color: white;
   transition: 0.2s linear;
-  opacity: 1;
+  opacity: 0;
 }
-/* 
-.todo:hover .fa-trash-alt {
-  width: 40px;
-  opacity: 1;
-} */
 
 .todo {
   line-height: 40px;
@@ -78,6 +74,12 @@ i.fa-trash-alt {
   background: #fff;
   color: #666;
 }
+
 .todo:nth-child(2n) {
   background: #f7f7f7;
+}
+
+.todo:hover i.fa-trash-alt {
+  width: 40px;
+  opacity: 1;
 }
