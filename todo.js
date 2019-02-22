@@ -21,3 +21,15 @@ $("p i").click(function() {
     .parent()
     .remove();
 });
+
+$("p").on("mouseover", function() {
+  $(this)
+    .children()
+    .show();
+});
+
+$("p").on("mouseout", function() {
+  $(this)
+    .children()
+    .hide();
+});
