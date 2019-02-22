@@ -13,3 +13,11 @@ $("input").keypress(function(e) {
       });
   }
 });
+
+//delete
+$("p i").click(function() {
+  console.log($(this).parent());
+  $(this)
+    .parent()
+    .remove();
+});
