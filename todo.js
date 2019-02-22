@@ -1,35 +1,61 @@
-$("p").on("click", function() {
+$("div").on("click", function() {
   $(this).toggleClass("complete");
 });
 
 $("input").keypress(function(e) {
   if (e.which == 13) {
     //create new item
-    $("div").append("<p>" + e.target.value + "</p>");
-    $("p")
+    $("body").append(
+      "<div><i class='fas fa-trash-alt'></i>" + e.target.value + "</div>"
+    );
+    $("div")
       .last()
       .on("click", function() {
         $(this).toggleClass("complete");
+      });
+    $("div")
+      .last()
+      .on("mouseover", function() {
+        $(this)
+          .children()
+          .show("fast");
+      });
+    $("div")
+      .last()
+      .on("mouseout", function() {
+        $(this)
+          .children()
+          .hide("fast");
+      });
+    $(".fa-trash-alt")
+      .last()
+      .click(function() {
+        console.log($(this));
+        $(this)
+          .parent()
+          .remove();
       });
   }
 });
 
 //delete
-$("p i").click(function() {
-  console.log($(this).parent());
+$(".fa-trash-alt").click(function() {
+  console.log($(this));
   $(this)
     .parent()
     .remove();
 });
 
-$("p").on("mouseover", function() {
+$("div").on("mouseover", function() {
+  console.log("in");
   $(this)
     .children()
-    .show();
+    .show("fast");
 });
 
-$("p").on("mouseout", function() {
+$("div").on("mouseout", function() {
+  console.log("out");
   $(this)
     .children()
-    .hide();
+    .hide("fast");
 });

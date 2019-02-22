@@ -3,6 +3,11 @@
   color: gray;
 }
 
-p i.fas {
+/* p {
+  padding: 15px;
+} */
+
+i.fa-trash-alt {
   display: none;
+  /* transition: all 1s; */
 }
