@@ -2,6 +2,34 @@ $("div").on("click", function() {
   $(this).toggleClass("complete");
 });
 
+//delete
+$(".fa-trash-alt").click(function() {
+  console.log($(this));
+  $(this)
+    .parent()
+    .remove();
+});
+
+$("div").on("mouseover", function() {
+  console.log("in");
+  $(this)
+    .children("i")
+    .show("fast");
+});
+
+$("div").on("mouseout", function() {
+  console.log("out");
+  $(this)
+    .children("i")
+    .hide("fast");
+});
+
+//show hide add new todo
+$(".fa-plus").click(function() {
+  $("input").toggle();
+});
+
+//add new todo and add listeners
 $("input").keypress(function(e) {
   if (e.which == 13) {
     //create new item
@@ -36,26 +64,4 @@ $("input").keypress(function(e) {
           .remove();
       });
   }
-});
-
-//delete
-$(".fa-trash-alt").click(function() {
-  console.log($(this));
-  $(this)
-    .parent()
-    .remove();
-});
-
-$("div").on("mouseover", function() {
-  console.log("in");
-  $(this)
-    .children()
-    .show("fast");
-});
-
-$("div").on("mouseout", function() {
-  console.log("out");
-  $(this)
-    .children()
-    .hide("fast");
 });

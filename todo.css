@@ -3,11 +3,10 @@
   color: gray;
 }
 
-/* p {
-  padding: 15px;
-} */
-
 i.fa-trash-alt {
   display: none;
-  /* transition: all 1s; */
+}
+
+div {
+  padding: 30px;
 }
