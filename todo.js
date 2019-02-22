@@ -10,14 +10,14 @@ $(".fa-trash-alt").click(function() {
     .remove();
 });
 
-$("div.todo").on("mouseover", function() {
+$("div.todo").mouseover(function() {
   console.log("in");
   $(this)
     .children("i")
     .show("fast");
 });
 
-$("div.todo").on("mouseout", function() {
+$("div.todo").mouseout(function() {
   console.log("out");
   $(this)
     .children("i")

@@ -28,7 +28,9 @@ input {
 }
 
 i.fa-trash-alt {
+  height: 15px;
   display: none;
+  background: red;
 }
 
 div {
@@ -36,5 +38,5 @@ div {
 }
 
 div:nth-child(even) {
-  color: red;
+  background: greenyellow;
 }
