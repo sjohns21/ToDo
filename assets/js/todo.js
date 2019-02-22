@@ -27,5 +27,5 @@ $("#list").on("click", ".fa-trash-alt", function(event) {
     .fadeOut(500, function() {
       $(this).remove();
     });
-  event.stopPropogation();
+  event.stopPropagation();
 });
