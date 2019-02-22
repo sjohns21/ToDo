@@ -65,6 +65,6 @@ $("input").keypress(function(e) {
           .parent()
           .remove();
       });
-    console.log($("input").value);
+    e.target.value = "";
   }
 });
